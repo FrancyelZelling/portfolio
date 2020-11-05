@@ -2,12 +2,13 @@ import React from 'react';
 import './App.css';
 
 import Navbar from "./Components/Navbar"
+import About from "./Components/About"
 
 const App = () => {
   return (
     <div className="App">
       <Navbar />
-      <h1 className="">Hello World</h1>
+      <About />
     </div>
   );
 }

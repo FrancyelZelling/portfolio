@@ -26,6 +26,13 @@ body,
   height: 100%;
 }
 
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Navbar Styling */
 nav {
   height: 55px;
   width: 100%;
@@ -52,4 +59,31 @@ nav ul {
 .nav-item-focused {
   color: var(--background);
   background-color: var(--primary);
+}
+/* END Navbar Styling */
+
+/* About Section Styling  */
+.about {
+  width: 100%;
+  margin-top: 200px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.description {
+  align-items: center;
+  text-align: center;
+  width: 40%;
+}
+
+.description > h3 {
+  margin-top: 5px;
+
+  font-weight: 300;
+}
+
+.description > p {
+  margin-top: 30px;
 }
