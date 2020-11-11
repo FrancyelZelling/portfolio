@@ -14,6 +14,12 @@ ul {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+}
+
+/* End Defaults */
+
 body, .App {
   font-family: "Quicksand", sans-serif;
   width: 100%;
@@ -45,8 +51,10 @@ nav {
   .nav-item{
     width: 110px;
     height: 55px;
+    color: $text-color;
     line-height: 55px;
     text-align: center;
+    text-decoration: none;
   }
 
   .nav-item-focused {
