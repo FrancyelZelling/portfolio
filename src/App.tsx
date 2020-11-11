@@ -1,8 +1,8 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./css/master.css";
 
-import Navbar from "./Components/Navbar"
-import About from "./Components/About"
+import Navbar from "./Components/Navbar";
+import About from "./Components/About";
 
 const App = () => {
   return (
@@ -11,5 +11,5 @@ const App = () => {
       <About />
     </div>
   );
-}
+};
 export default App;
