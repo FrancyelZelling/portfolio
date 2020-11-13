@@ -4,7 +4,7 @@ import "./css/master.css";
 
 import Navbar from "./Components/Navbar";
 import About from "./Components/About";
-import Contact from "./Components/Contact";
+import Skills from "./Components/Skills";
 import Projects from "./Components/Projects";
 
 const App = () => {
@@ -14,9 +14,10 @@ const App = () => {
         <Navbar />
         <Route exact path="/" component={About} />
         <Route path="/projects" component={Projects} />
-        <Route path="/contact" component={Contact} />
+        <Route path="/skills" component={Skills} />
       </div>
     </Router>
   );
 };
+
 export default App;

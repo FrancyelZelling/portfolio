@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const About: React.FC = () => {
   return (
@@ -18,40 +19,18 @@ const About: React.FC = () => {
           quae asperiores id quos obcaecati! Et enim ipsam eum accusantium dolor
           ad consequatur dolor aut impedit natus."
         </p>
+        <button className="skills-btn">
+          <Link to="/skills">Skills</Link>
+        </button>
+        <button className="project-btn">
+          <Link to="/projects">Projects</Link>
+        </button>
       </div>
-      <div className="skills">
-        <h3>Skills</h3>
-        <div className="skills-container">
-          <div className="skill-section">
-            <h4>Languages</h4>
-            <ul>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>Javascript</li>
-              <li>Typescript</li>
-              <li>Python</li>
-            </ul>
-          </div>
-          <div className="skill-section">
-            <h4>Tools</h4>
-            <ul>
-              <li>Node.js</li>
-              <li>Sass</li>
-              <li>Express</li>
-              <li>TypeORM</li>
-              <li>PostgreSQL</li>
-              <li>Linux</li>
-            </ul>
-          </div>
-        </div>
-        <div className="soft-skills-section">
-          <h4>Soft Skills</h4>
-          <ul>
-            <li>Problem Solving</li>
-            <li>Communication</li>
-            <li>Teamwork & Collaboration</li>
-            <li>Patience</li>
-          </ul>
+      <div className="contact">
+        <img src="https://i.imgur.com/RlGfO9F.jpg?3" alt="profile-pic" />
+        <div className="email">
+          <h4>email</h4>
+          <button>zellingf@gmail.com</button>
         </div>
       </div>
     </section>

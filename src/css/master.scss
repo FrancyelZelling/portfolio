@@ -1,10 +1,11 @@
 $primary-color: #ff6666;
 $secondary-color: #2ec4b6;
 $background-color: #ffffff;
-$text-color: #2e294a;
+$text-light: #ffffff;
+$text-dark: #2e294a;
 
 /* Defaults */
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -18,14 +19,32 @@ a {
   text-decoration: none;
 }
 
+img {
+  border: 2px solid $secondary-color;
+  border-radius: 2px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 120px;
+  height: 150px;
+}
+
+button {
+  width: 150px;
+  height: 35px;
+  margin: 50px 30px;
+  border: none;
+  border-radius: 2px;
+  font-size: 1rem;
+}
+
 /* End Defaults */
 
-body, .App {
+body,
+.App {
   font-family: "Quicksand", sans-serif;
   width: 100%;
   height: 100%;
 }
-
 App {
   display: flex;
   align-items: center;
@@ -42,16 +61,16 @@ nav {
   justify-content: flex-end;
 
   ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50px;
   }
 
-  .nav-item{
+  .nav-item {
     width: 110px;
     height: 55px;
-    color: $text-color;
+    color: $text-dark;
     line-height: 55px;
     text-align: center;
     text-decoration: none;
@@ -71,13 +90,30 @@ nav {
 
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
+
+  .skills-btn {
+    background-color: $primary-color;
+
+    a {
+      color: $text-light;
+    }
+  }
+
+  .project-btn {
+    background-color: $secondary-color;
+
+    a {
+      color: $text-light;
+    }
+  }
 }
 
 .description {
   align-items: center;
   text-align: center;
-  width: 40%;
+  width: 50%;
+  margin-right: 100px;
 
   > h3 {
     margin-top: 5px;
@@ -86,6 +122,31 @@ nav {
 
   > p {
     margin-top: 30px;
+  }
+}
+
+.contact {
+  border: 2px solid $secondary-color;
+  border-radius: 2px;
+  padding: 20px 100px 50px 100px;
+  text-align: center;
+
+  button {
+    margin: 2px;
+    padding: 2px 5px;
+    font-size: 0.9rem;
+  }
+
+  .email {
+    h4 {
+      margin-top: 15px;
+      font-weight: 400;
+    }
+
+    button {
+      background-color: $primary-color;
+      color: $text-dark;
+    }
   }
 }
 
