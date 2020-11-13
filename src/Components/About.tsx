@@ -27,10 +27,16 @@ const About: React.FC = () => {
         </button>
       </div>
       <div className="contact">
-        <img src="https://i.imgur.com/RlGfO9F.jpg?3" alt="profile-pic" />
+        <img src="https://i.imgur.com/YgnzBbR.jpg" alt="profile-pic" />
         <div className="email">
           <h4>email</h4>
           <button>zellingf@gmail.com</button>
+        </div>
+        <div className="socials">
+          <h4>socials</h4>
+          <button>LinkedIn</button>
+          <button>Github</button>
+          <button>Twitter</button>
         </div>
       </div>
     </section>

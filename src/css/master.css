@@ -11,12 +11,12 @@ a {
   text-decoration: none; }
 
 img {
-  border: 2px solid #2ec4b6;
-  border-radius: 2px;
+  border: 3px solid #2ec4b6;
+  border-radius: 30px;
   margin-left: auto;
   margin-right: auto;
   width: 120px;
-  height: 150px; }
+  height: 160px; }
 
 button {
   width: 150px;
@@ -91,20 +91,26 @@ nav {
     margin-top: 30px; }
 
 .contact {
-  border: 2px solid #2ec4b6;
-  border-radius: 2px;
-  padding: 20px 100px 50px 100px;
+  border: 4px solid #ff6666;
+  border-radius: 6px;
+  padding: 20px 80px 50px 80px;
   text-align: center; }
   .contact button {
     margin: 2px;
     padding: 2px 5px;
     font-size: 0.9rem; }
   .contact .email h4 {
-    margin-top: 15px;
-    font-weight: 400; }
+    margin-top: 15px; }
   .contact .email button {
     background-color: #ff6666;
     color: #2e294a; }
+  .contact .socials {
+    display: flex;
+    flex-direction: column;
+    margin-top: 12px; }
+    .contact .socials button {
+      background-color: #ffffff;
+      border: 2px solid #2ec4b6; }
 
 .skills {
   text-align: center; }
