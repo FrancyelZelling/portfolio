@@ -75,7 +75,6 @@ nav {
     text-align: center;
     text-decoration: none;
   }
-
   .nav-item-focused {
     color: $background-color;
     background-color: $primary-color;
@@ -162,17 +161,94 @@ nav {
 
 .skills {
   text-align: center;
-}
-
-.skills-container {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.2rem;
+  margin-top: 150px;
+
+  > h1 {
+    margin-bottom: 50px;
+  }
+
+  .skills-container {
+    display: flex;
+    max-width: 800px;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .skill-section {
+    margin: 70px;
+    padding: 50px;
+    padding-top: 20px;
+    border: 3px solid $primary-color;
+    border-radius: 3px;
+
+    > h4 {
+      margin-bottom: 20px;
+      padding-bottom: 5px;
+      border-bottom: 2px solid $secondary-color;
+    }
+
+    > li {
+      margin: 4px 0px;
+    }
+  }
 }
 
-.skill-section {
-  margin: 10px 15px;
 
-  > h4 {
-    margin-bottom: 4px;
+.projects{
+  display: flex;
+  flex-direction: column;
+  margin-top: 160px;
+  align-items: center;
+  justify-content: center;
+  
+  >h1{
+    margin-bottom: 50px;
+  }
+  
+  .projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .project {
+    .buttons {
+      display: flex;
+
+       button {
+       display: inline-block;
+       margin: 0px;
+       
+     }
+       .main {
+         background-color: $primary-color;
+         color: $text-light;
+       }
+
+       .secondary {
+         border: 2px solid $secondary-color;
+         background-color: $background-color;
+         color: $secondary-color;
+       }
+    }
+    .img-blank{
+      background-color: $text-dark;
+      color: $text-light;
+      text-align: center;
+      padding-top: 20px;
+      width: 300px;
+      height: 150px;
+      
+      > h5{
+        margin-top: 10px;
+      }
+    }
   }
 }

@@ -3,7 +3,7 @@ import React from "react";
 const Skills: React.FC = () => {
   return (
     <div className="skills">
-      <h3>Skills</h3>
+      <h1>Skills</h1>
       <div className="skills-container">
         <div className="skill-section">
           <h4>Languages</h4>
@@ -26,15 +26,15 @@ const Skills: React.FC = () => {
             <li>Linux</li>
           </ul>
         </div>
-      </div>
-      <div className="soft-skills-section">
-        <h4>Soft Skills</h4>
-        <ul>
-          <li>Problem Solving</li>
-          <li>Communication</li>
-          <li>Teamwork & Collaboration</li>
-          <li>Patience</li>
-        </ul>
+        <div className="skill-section">
+          <h4>Soft Skills</h4>
+          <ul>
+            <li>Problem Solving</li>
+            <li>Communication</li>
+            <li>Teamwork & Collaboration</li>
+            <li>Patience</li>
+          </ul>
+        </div>
       </div>
     </div>
   );
