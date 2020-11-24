@@ -4,6 +4,11 @@ $background-color: #ffffff;
 $text-light: #ffffff;
 $text-dark: #2e294a;
 
+// Breakpoints
+$break-small: 320px;
+$break-medium: 768px;
+$break-large: 1200px;
+
 /* Defaults */
 * {
   margin: 0;
@@ -79,6 +84,18 @@ nav {
     color: $background-color;
     background-color: $primary-color;
   }
+
+  @media screen and (max-width: $break-medium) {
+    width: 100%;
+    justify-content: center;
+
+    ul {
+      width: 100vw;
+      margin: 0px 25px;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
 }
 /* END Navbar Styling */
 
@@ -106,6 +123,12 @@ nav {
       color: $text-light;
     }
   }
+
+  @media screen and (max-width: $break-medium) {
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 50px;
+  }
 }
 
 .description {
@@ -122,6 +145,19 @@ nav {
   > p {
     margin-top: 30px;
   }
+
+  @media screen and (max-width: 768px) {
+    justify-content: center;
+    width: 60vw;
+    margin-left: auto;
+
+    .btn-container {
+      display: flex;
+    }
+    button {
+      margin: 15px 5px;
+    }
+  }
 }
 
 .contact {
@@ -129,6 +165,7 @@ nav {
   border-radius: 6px;
   padding: 20px 80px 50px 80px;
   text-align: center;
+  margin-top: 40px;
 
   button {
     margin: 2px;
@@ -167,8 +204,12 @@ nav {
   font-size: 1.2rem;
   margin-top: 150px;
 
+  @media screen and (max-width: $break-medium) {
+    margin-top: 50px;
+  }
+
   > h1 {
-    margin-bottom: 50px;
+    margin-bottom: 25px;
   }
 
   .skills-container {
@@ -176,6 +217,10 @@ nav {
     max-width: 800px;
     align-items: center;
     justify-content: space-evenly;
+
+    @media screen and (max-width: $break-medium) {
+      flex-direction: column;
+    }
   }
 
   .skill-section {
@@ -184,6 +229,12 @@ nav {
     padding-top: 20px;
     border: 3px solid $primary-color;
     border-radius: 3px;
+    width: 250px;
+    text-align: center;
+
+    @media screen and (max-width: $break-medium) {
+      margin: 20px;
+    }
 
     > h4 {
       margin-bottom: 20px;
@@ -197,18 +248,17 @@ nav {
   }
 }
 
-
-.projects{
+.projects {
   display: flex;
   flex-direction: column;
   margin-top: 160px;
   align-items: center;
   justify-content: center;
-  
-  >h1{
+
+  > h1 {
     margin-bottom: 50px;
   }
-  
+
   .projects-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -216,39 +266,45 @@ nav {
     align-items: center;
     justify-content: center;
     padding: 20px;
+
+    @media screen and (max-width: $break-medium) {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   .project {
     .buttons {
       display: flex;
 
-       button {
-       display: inline-block;
-       margin: 0px;
-       
-     }
-       .main {
-         background-color: $primary-color;
-         color: $text-light;
-       }
+      button {
+        display: inline-block;
+        margin: 0px;
+      }
+      .main {
+        background-color: $primary-color;
+        color: $text-light;
+      }
 
-       .secondary {
-         border: 2px solid $secondary-color;
-         background-color: $background-color;
-         color: $secondary-color;
-       }
+      .secondary {
+        border: 2px solid $secondary-color;
+        background-color: $background-color;
+        color: $secondary-color;
+      }
     }
-    .img-blank{
+    .img-blank {
       background-color: $text-dark;
       color: $text-light;
       text-align: center;
       padding-top: 20px;
       width: 300px;
       height: 150px;
-      
-      > h5{
+
+      > h5 {
         margin-top: 10px;
       }
     }
   }
 }
+
+@use 'breakpoints.scss';

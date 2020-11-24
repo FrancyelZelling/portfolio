@@ -61,6 +61,15 @@ nav {
   nav .nav-item-focused {
     color: #ffffff;
     background-color: #ff6666; }
+  @media screen and (max-width: 768px) {
+    nav {
+      width: 100%;
+      justify-content: center; }
+      nav ul {
+        width: 100vw;
+        margin: 0px 25px;
+        display: flex;
+        justify-content: space-between; } }
 
 /* END Navbar Styling */
 /* About Section Styling */
@@ -78,6 +87,11 @@ nav {
     background-color: #2ec4b6; }
     .about .project-btn a {
       color: #ffffff; }
+  @media screen and (max-width: 768px) {
+    .about {
+      flex-direction: column;
+      justify-content: center;
+      margin-top: 50px; } }
 
 .description {
   align-items: center;
@@ -89,12 +103,22 @@ nav {
     font-weight: 300; }
   .description > p {
     margin-top: 30px; }
+  @media screen and (max-width: 768px) {
+    .description {
+      justify-content: center;
+      width: 60vw;
+      margin-left: auto; }
+      .description .btn-container {
+        display: flex; }
+      .description button {
+        margin: 15px 5px; } }
 
 .contact {
   border: 4px solid #ff6666;
   border-radius: 6px;
   padding: 20px 80px 50px 80px;
-  text-align: center; }
+  text-align: center;
+  margin-top: 40px; }
   .contact button {
     margin: 2px;
     padding: 2px 5px;
@@ -119,19 +143,30 @@ nav {
   align-items: center;
   font-size: 1.2rem;
   margin-top: 150px; }
+  @media screen and (max-width: 768px) {
+    .skills {
+      margin-top: 50px; } }
   .skills > h1 {
-    margin-bottom: 50px; }
+    margin-bottom: 25px; }
   .skills .skills-container {
     display: flex;
     max-width: 800px;
     align-items: center;
     justify-content: space-evenly; }
+    @media screen and (max-width: 768px) {
+      .skills .skills-container {
+        flex-direction: column; } }
   .skills .skill-section {
     margin: 70px;
     padding: 50px;
     padding-top: 20px;
     border: 3px solid #ff6666;
-    border-radius: 3px; }
+    border-radius: 3px;
+    width: 250px;
+    text-align: center; }
+    @media screen and (max-width: 768px) {
+      .skills .skill-section {
+        margin: 20px; } }
     .skills .skill-section > h4 {
       margin-bottom: 20px;
       padding-bottom: 5px;
@@ -154,6 +189,10 @@ nav {
     align-items: center;
     justify-content: center;
     padding: 20px; }
+    @media screen and (max-width: 768px) {
+      .projects .projects-container {
+        display: flex;
+        flex-direction: column; } }
   .projects .project .buttons {
     display: flex; }
     .projects .project .buttons button {
@@ -175,3 +214,5 @@ nav {
     height: 150px; }
     .projects .project .img-blank > h5 {
       margin-top: 10px; }
+
+@use 'breakpoints.scss';

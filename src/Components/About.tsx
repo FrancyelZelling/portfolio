@@ -19,12 +19,14 @@ const About: React.FC = () => {
           quae asperiores id quos obcaecati! Et enim ipsam eum accusantium dolor
           ad consequatur dolor aut impedit natus."
         </p>
-        <button className="skills-btn">
-          <Link to="/skills">Skills</Link>
-        </button>
-        <button className="project-btn">
-          <Link to="/projects">Projects</Link>
-        </button>
+        <div className="btn-container">
+          <button className="skills-btn">
+            <Link to="/skills">Skills</Link>
+          </button>
+          <button className="project-btn">
+            <Link to="/projects">Projects</Link>
+          </button>
+        </div>
       </div>
       <div className="contact">
         <img src="https://i.imgur.com/YgnzBbR.jpg" alt="profile-pic" />
