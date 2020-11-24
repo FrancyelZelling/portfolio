@@ -96,6 +96,7 @@ nav {
 .description {
   align-items: center;
   text-align: center;
+  justify-content: center;
   width: 50%;
   margin-right: 100px; }
   .description > h3 {
@@ -107,7 +108,7 @@ nav {
     .description {
       justify-content: center;
       width: 60vw;
-      margin-left: auto; }
+      margin: 0 auto; }
       .description .btn-container {
         display: flex; }
       .description button {
