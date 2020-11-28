@@ -1,57 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
+import ProjectItem from "./ProjectItem";
 
-const Projects: React.FC = () => {
+//import ProjectItemInterface from "./ProjectItem";
+
+interface ProjectsInterface {
+  setActive(arg0: string): void;
+}
+
+const portfolio = {
+  title: "Portfolio Website",
+  description: "Simple portfolio made using React.js",
+  tools: "React.js Typescript & Sass",
+};
+
+const Projects: React.FC<ProjectsInterface> = ({ setActive }) => {
+  useEffect(() => setActive("projects"), [setActive]);
   return (
     <div className="projects">
       <h1>Projects</h1>
       <div className="projects-container">
-        <div className="project">
-          <div className="img-blank">
-            <h4>Portfolio Website</h4>
-            <p>Simple portfolio made using React.js</p>
-            <h5>Tools</h5>
-            <p>React.js, Typescript & Sass</p>
-          </div>
-          <div className="buttons">
-            <button className="main">View Live</button>
-            <button className="secondary">View Code</button>
-          </div>
-        </div>
-        <div className="project">
-          <div className="img-blank"></div>
-          <div className="buttons">
-            <button className="main">View Live</button>
-            <button className="secondary">View Code</button>
-          </div>
-        </div>
-        <div className="project">
-          <div className="img-blank"></div>
-          <div className="buttons">
-            <button className="main">View Live</button>
-            <button className="secondary">View Code</button>
-          </div>
-        </div>
-        <div className="project">
-          <div className="img-blank"></div>
-          <div className="buttons">
-            <button className="main">View Live</button>
-            <button className="secondary">View Code</button>
-          </div>
-        </div>
-        <div className="project">
-          <div className="img-blank"></div>
-          <div className="buttons">
-            <button className="main">View Live</button>
-            <button className="secondary">View Code</button>
-          </div>
-        </div>
-        <div className="project">
-          <div className="img-blank"></div>
-          <div className="buttons">
-            <button className="main">View Live</button>
-            <button className="secondary">View Code</button>
-          </div>
-        </div>
+        <ProjectItem item={portfolio} />
       </div>
     </div>
   );

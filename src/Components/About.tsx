@@ -1,23 +1,38 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
-const About: React.FC = () => {
+interface AboutInterface {
+  setActive(arg0: string): void;
+}
+
+const About: React.FC<AboutInterface> = ({ setActive }) => {
+  useEffect(() => setActive("about"), [setActive]);
+
   return (
     <section className="about">
       <div className="description">
         <h2>Francyel Zelling</h2>
         <h3>Full Stack Developer & Web Designer</h3>
         <p>
-          "Lorem ipsum dolor sit amet. Vel deleniti sequi qui eveniet quod non
-          vero ratione? At praesentium deserunt ab provident commodi 33
-          molestiae quaerat. Quo quod blanditiis in enim animi sed quos
-          deleniti. Aut voluptatem veniam non nesciunt voluptas cum quia
-          repellendus ea molestias perspiciatis. Aut ipsa aliquid ut quod
-          distinctio et corporis repudiandae. Aut architecto consequatur ea
-          praesentium voluptatem ab consequatur soluta ut voluptatem omnis et
-          necessitatibus dolor qui dolore perspiciatis! Aut molestiae nemo ad
-          quae asperiores id quos obcaecati! Et enim ipsam eum accusantium dolor
-          ad consequatur dolor aut impedit natus."
+          Amante de Tecnologia, estudo sobre programação desde 2017, porém,
+          brinco desde meus 15 anos, quando cursei brevemente um curso de
+          desenvolvimento em games.
+        </p>
+
+        <p>
+          Atualmente meu maior objetivo é trabalhar na área de desenvolvimento
+          web. Já desenvolvi vários sites simples usando HTML, CSS e Javascript,
+          mas quando descobri o React.js me apaixonei com o conceito de SPA, e
+          de quão facil é costruir sites ultilizando ele.
+        </p>
+
+        <p>
+          No momento ultilizo junto do React o Typescript, que ao meu ver
+          facilita muito o desenvolvimento, e ajuda a previnir erros "bobos".
+          Também tenho conhecimento sobre Python, pois desenvolvi um backend
+          simples para um ecommerce ultilizando o flask, e também sei um
+          pouquinho de PHP, mas realmente Typescript & React.js são muito minhas
+          tecnologias favoritas no momento.
         </p>
         <div className="btn-container">
           <button className="skills-btn">
@@ -36,9 +51,17 @@ const About: React.FC = () => {
         </div>
         <div className="socials">
           <h4>socials</h4>
-          <button>LinkedIn</button>
-          <button>Github</button>
-          <button>Twitter</button>
+          <button>
+            <a href="https://www.linkedin.com/in/francyel-zelling-57aaa0192/">
+              LinkedIn
+            </a>
+          </button>
+          <button>
+            <a href="https://www.github.com/FrancyelZelling">Github</a>
+          </button>
+          <button>
+            <a href="https://www.twitter.com/francyelzelling">Twitter</a>
+          </button>
         </div>
       </div>
     </section>

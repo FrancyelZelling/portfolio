@@ -1,6 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 
-const Skills: React.FC = () => {
+interface SkillsInterface {
+  setActive(arg0: string): void;
+}
+
+const Skills: React.FC<SkillsInterface> = ({ setActive }) => {
+  useEffect(() => setActive("skills"), [setActive]);
   return (
     <div className="skills">
       <h1>Skills</h1>

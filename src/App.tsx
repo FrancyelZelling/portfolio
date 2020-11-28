@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./css/master.css";
 
@@ -8,13 +8,18 @@ import Skills from "./Components/Skills";
 import Projects from "./Components/Projects";
 
 const App = () => {
+  const [active, setActive] = useState("");
+
   return (
     <Router>
       <div className="App">
-        <Navbar />
-        <Route exact path="/" component={About} />
-        <Route path="/projects" component={Projects} />
-        <Route path="/skills" component={Skills} />
+        <Navbar active={active} />
+        <Route exact path="/" render={() => <About setActive={setActive} />} />
+        <Route
+          path="/projects"
+          render={() => <Projects setActive={setActive} />}
+        />
+        <Route path="/skills" render={() => <Skills setActive={setActive} />} />
       </div>
     </Router>
   );

@@ -121,11 +121,15 @@ nav {
   border-radius: 6px;
   padding: 20px 80px 50px 80px;
   text-align: center;
-  margin-top: 40px; }
+  margin: 40px 0; }
   .contact button {
     margin: 2px;
     padding: 2px 5px;
     font-size: 0.9rem; }
+  .contact a {
+    color: #2e294a; }
+    .contact a :visited {
+      color: #2e294a; }
   .contact .email h4 {
     margin-top: 15px; }
   .contact .email button {

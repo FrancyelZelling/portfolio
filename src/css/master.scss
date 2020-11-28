@@ -168,12 +168,20 @@ nav {
   border-radius: 6px;
   padding: 20px 80px 50px 80px;
   text-align: center;
-  margin-top: 40px;
+  margin: 40px 0;
 
   button {
     margin: 2px;
     padding: 2px 5px;
     font-size: 0.9rem;
+  }
+
+  a {
+    color: $text-dark;
+
+    :visited {
+      color: $text-dark;
+    }
   }
 
   .email {
