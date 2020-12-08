@@ -11,6 +11,8 @@ const portfolio = {
   title: "Portfolio Website",
   description: "Simple portfolio made using React.js",
   tools: "React.js Typescript & Sass",
+  live: "https://francyel-zelling.netlify.app",
+  source: "https://github.com/FrancyelZelling/portfolio",
 };
 
 const Projects: React.FC<ProjectsInterface> = ({ setActive }) => {

@@ -8,6 +8,8 @@ export interface ProjectItemInterface {
   title: string;
   description: string;
   tools: string;
+  live: string;
+  source: string;
 }
 
 const ProjectItem: React.FC<PropsInterface> = ({ item }) => {
@@ -20,8 +22,12 @@ const ProjectItem: React.FC<PropsInterface> = ({ item }) => {
         <p>{item.tools}</p>
       </div>
       <div className="buttons">
-        <button className="main">View Live</button>
-        <button className="secondary">View Code</button>
+        <button className="main">
+          <a href={item.live}>View Live</a>
+        </button>
+        <button className="secondary">
+          <a href={item.source}>View Source</a>
+        </button>
       </div>
     </div>
   );
